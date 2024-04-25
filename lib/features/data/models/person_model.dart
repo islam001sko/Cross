@@ -32,8 +32,8 @@ class PersonModel extends PersonEntity {
           : null,
       image: json['image'],
       episodes:
-          (json['episodes'] as List<dynamic>).map((e) => e as String).toList(),
-      created: DateTime.parse(json['created'] as String),
+          (json['episode'] as List<dynamic>).map((e) => e.toString()).toList(),
+      created: DateTime.parse(json['created']),
     );
   }
 
